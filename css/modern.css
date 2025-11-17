@@ -1463,3 +1463,13 @@ body.cursor-hover .cursor-ring {
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.7;
 }
+
+/* 3D Background positioning */
+.page-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-modern {
+    position: relative;
+}
