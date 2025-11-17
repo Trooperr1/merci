@@ -1,0 +1,22 @@
+{
+  "name": "merci-studio",
+  "version": "1.0.0",
+  "description": "Premium AI & Web Development Studio Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "studio",
+    "ai",
+    "web-development",
+    "social-media",
+    "pos"
+  ],
+  "author": "Merci Studio",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.160.0"
+  }
+}
