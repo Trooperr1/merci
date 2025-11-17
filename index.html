@@ -3,35 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium AI & Web Development Studio - Cutting-edge solutions in AI, Web Development, Social Media Management, and POS Systems">
-    <title>MERCI Studio | Premium Digital Solutions</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="MERCI Studio - Swiss-based international digital agency. Premium AI, Web Development, Social Media Management & POS solutions for global brands.">
+    <title>MERCI Studio | Swiss Digital Excellence | AI & Web Development</title>
+
+    <!-- Preload critical assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modern.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
 </head>
 <body>
-    <!-- Cursor follower -->
-    <div class="cursor-follower"></div>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="logo-text">MERCI</span>
+                <span class="logo-dot">◆</span>
+            </div>
+            <div class="preloader-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p class="preloader-text">Loading Excellence...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
 
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="nav-container">
             <div class="nav-logo">
+                <span class="logo-mark">◆</span>
                 <span class="logo-text">MERCI</span>
-                <span class="logo-dot">•</span>
+                <span class="logo-location">ZÜRICH</span>
             </div>
+
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#ai" class="nav-link">AI</a></li>
-                <li><a href="#web" class="nav-link">Web Dev</a></li>
-                <li><a href="#social" class="nav-link">Social Media</a></li>
-                <li><a href="#pos" class="nav-link">POS</a></li>
-                <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-text="Home">Home</a></li>
+                <li><a href="#expertise" class="nav-link" data-text="Expertise">Expertise</a></li>
+                <li><a href="#portfolio" class="nav-link" data-text="Work">Work</a></li>
+                <li><a href="#process" class="nav-link" data-text="Process">Process</a></li>
+                <li><a href="#testimonials" class="nav-link" data-text="Clients">Clients</a></li>
             </ul>
+
+            <div class="nav-actions">
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="de">DE</button>
+                    <button class="lang-btn" data-lang="fr">FR</button>
+                </div>
+                <a href="#contact" class="btn btn-nav">Let's Talk</a>
+            </div>
+
             <div class="nav-toggle" id="navToggle">
-                <span></span>
                 <span></span>
                 <span></span>
             </div>
@@ -39,326 +71,660 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-3d" id="hero3d"></div>
-        <div class="hero-content">
-            <div class="hero-badge">Premium Digital Studio</div>
-            <h1 class="hero-title">
-                <span class="title-line">Crafting Digital</span>
-                <span class="title-line">Excellence</span>
-            </h1>
-            <p class="hero-subtitle">We transform ideas into extraordinary digital experiences through AI, cutting-edge web development, strategic social media, and innovative POS solutions.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Start Your Project</a>
-                <a href="#services" class="btn btn-secondary">Explore Services</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Projects Delivered</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Client Satisfaction</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Support Available</span>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll to explore</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
+    <section class="hero-modern" id="home">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="grain-overlay"></div>
 
-    <!-- Services Overview -->
-    <section class="services-overview" id="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">What We Do</span>
-                <h2 class="section-title">Premium Services</h2>
-                <p class="section-subtitle">Four core pillars of digital excellence</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card" data-service="ai">
-                    <div class="service-icon">
-                        <div class="icon-3d" id="aiIcon"></div>
-                    </div>
-                    <h3 class="service-title">Artificial Intelligence</h3>
-                    <p class="service-description">Harness the power of AI to automate, predict, and transform your business operations with cutting-edge machine learning solutions.</p>
-                    <a href="#ai" class="service-link">Explore AI →</a>
+        <div class="hero-grid">
+            <div class="hero-content-wrapper">
+                <div class="hero-badge" data-aos="fade-up">
+                    <span class="badge-icon">◆</span>
+                    <span>Swiss-Based International Studio</span>
+                    <span class="badge-pulse"></span>
                 </div>
-                <div class="service-card" data-service="web">
-                    <div class="service-icon">
-                        <div class="icon-3d" id="webIcon"></div>
-                    </div>
-                    <h3 class="service-title">Web Development</h3>
-                    <p class="service-description">Build blazing-fast, scalable web applications with modern frameworks and pristine user experiences that convert.</p>
-                    <a href="#web" class="service-link">Explore Web Dev →</a>
-                </div>
-                <div class="service-card" data-service="social">
-                    <div class="service-icon">
-                        <div class="icon-3d" id="socialIcon"></div>
-                    </div>
-                    <h3 class="service-title">Social Media Management</h3>
-                    <p class="service-description">Amplify your brand presence with strategic content, engagement tactics, and data-driven social media campaigns.</p>
-                    <a href="#social" class="service-link">Explore Social →</a>
-                </div>
-                <div class="service-card" data-service="pos">
-                    <div class="service-icon">
-                        <div class="icon-3d" id="posIcon"></div>
-                    </div>
-                    <h3 class="service-title">POS Systems</h3>
-                    <p class="service-description">Streamline your retail operations with intelligent point-of-sale systems that integrate seamlessly with your business.</p>
-                    <a href="#pos" class="service-link">Explore POS →</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- AI Section -->
-    <section class="service-detail ai-section" id="ai">
-        <div class="detail-3d" id="ai3d"></div>
-        <div class="container">
-            <div class="detail-content">
-                <span class="detail-label">01 — Artificial Intelligence</span>
-                <h2 class="detail-title">Intelligent Solutions for Tomorrow</h2>
-                <p class="detail-description">Transform your business with AI-powered automation, predictive analytics, natural language processing, and computer vision solutions tailored to your unique challenges.</p>
-                <div class="detail-features">
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Machine Learning Models</h4>
-                            <p>Custom ML models trained on your data for precise predictions and insights</p>
-                        </div>
+                <h1 class="hero-title-modern" data-aos="fade-up" data-aos-delay="100">
+                    <span class="title-line">
+                        <span class="word">Digital</span>
+                        <span class="word">Excellence</span>
+                    </span>
+                    <span class="title-line">
+                        <span class="word">Engineered</span>
+                        <span class="word">Globally</span>
+                    </span>
+                </h1>
+
+                <p class="hero-subtitle-modern" data-aos="fade-up" data-aos-delay="200">
+                    We architect cutting-edge digital solutions for international brands.
+                    From AI-powered platforms to premium web experiences, we transform
+                    visionary ideas into market-leading realities.
+                </p>
+
+                <div class="hero-metrics" data-aos="fade-up" data-aos-delay="300">
+                    <div class="metric-item">
+                        <div class="metric-number" data-count="150">0</div>
+                        <div class="metric-label">Global Clients</div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Natural Language Processing</h4>
-                            <p>Advanced NLP solutions for chatbots, sentiment analysis, and text processing</p>
-                        </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <div class="metric-number" data-count="50">0</div>
+                        <div class="metric-label">Countries Served</div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Computer Vision</h4>
-                            <p>Image recognition, object detection, and visual intelligence systems</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>AI Automation</h4>
-                            <p>Intelligent process automation to streamline operations and reduce costs</p>
-                        </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <div class="metric-number" data-count="99">0</div>
+                        <div class="metric-suffix">%</div>
+                        <div class="metric-label">Success Rate</div>
                     </div>
                 </div>
-                <a href="#contact" class="btn btn-primary">Discuss AI Solutions</a>
+
+                <div class="hero-cta-group" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#contact" class="btn btn-primary-modern">
+                        <span>Start Your Project</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="#portfolio" class="btn btn-secondary-modern">
+                        <span>View Our Work</span>
+                    </a>
+                </div>
+
+                <div class="hero-scroll-indicator" data-aos="fade-up" data-aos-delay="500">
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                    <span class="scroll-text">Scroll to explore</span>
+                </div>
+            </div>
+
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+                <div class="visual-3d" id="heroVisual3D"></div>
+                <div class="visual-stats">
+                    <div class="stat-floating" style="--delay: 0s">
+                        <span class="stat-icon">⚡</span>
+                        <span class="stat-text">AI Powered</span>
+                    </div>
+                    <div class="stat-floating" style="--delay: 0.5s">
+                        <span class="stat-icon">🌍</span>
+                        <span class="stat-text">Global Reach</span>
+                    </div>
+                    <div class="stat-floating" style="--delay: 1s">
+                        <span class="stat-icon">🏆</span>
+                        <span class="stat-text">Award Winning</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Web Development Section -->
-    <section class="service-detail web-section" id="web">
-        <div class="detail-3d" id="web3d"></div>
-        <div class="container">
-            <div class="detail-content">
-                <span class="detail-label">02 — Web Development</span>
-                <h2 class="detail-title">Exceptional Web Experiences</h2>
-                <p class="detail-description">We craft high-performance web applications using modern technologies like React, Next.js, Node.js, and cloud infrastructure that scale with your growth.</p>
-                <div class="detail-features">
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Full-Stack Development</h4>
-                            <p>End-to-end web solutions with React, Vue, Node.js, and serverless architectures</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>E-Commerce Platforms</h4>
-                            <p>Custom online stores with payment integration, inventory, and analytics</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Progressive Web Apps</h4>
-                            <p>Lightning-fast PWAs that work offline and feel like native applications</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>API Development</h4>
-                            <p>RESTful and GraphQL APIs with robust security and documentation</p>
-                        </div>
-                    </div>
-                </div>
-                <a href="#contact" class="btn btn-primary">Start Web Project</a>
+    <!-- Marquee - Trusted By -->
+    <section class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-content">
+                <span>ARTIFICIAL INTELLIGENCE</span>
+                <span class="marquee-dot">◆</span>
+                <span>WEB DEVELOPMENT</span>
+                <span class="marquee-dot">◆</span>
+                <span>SOCIAL MEDIA</span>
+                <span class="marquee-dot">◆</span>
+                <span>POS SYSTEMS</span>
+                <span class="marquee-dot">◆</span>
+                <span>ARTIFICIAL INTELLIGENCE</span>
+                <span class="marquee-dot">◆</span>
+                <span>WEB DEVELOPMENT</span>
+                <span class="marquee-dot">◆</span>
+                <span>SOCIAL MEDIA</span>
+                <span class="marquee-dot">◆</span>
+                <span>POS SYSTEMS</span>
+                <span class="marquee-dot">◆</span>
             </div>
         </div>
     </section>
 
-    <!-- Social Media Section -->
-    <section class="service-detail social-section" id="social">
-        <div class="detail-3d" id="social3d"></div>
-        <div class="container">
-            <div class="detail-content">
-                <span class="detail-label">03 — Social Media Management</span>
-                <h2 class="detail-title">Amplify Your Digital Presence</h2>
-                <p class="detail-description">Strategic social media management that builds communities, drives engagement, and converts followers into loyal customers across all major platforms.</p>
-                <div class="detail-features">
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Content Strategy</h4>
-                            <p>Data-driven content calendars that resonate with your target audience</p>
+    <!-- Expertise Section -->
+    <section class="expertise-section" id="expertise">
+        <div class="container-large">
+            <div class="section-header-modern" data-aos="fade-up">
+                <div class="section-label-modern">
+                    <span class="label-number">01</span>
+                    <span class="label-text">Core Expertise</span>
+                </div>
+                <h2 class="section-title-modern">
+                    Services That Drive <br>
+                    <span class="title-gradient">Global Innovation</span>
+                </h2>
+            </div>
+
+            <div class="expertise-grid">
+                <!-- AI Card -->
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-number">01</div>
+                    <div class="card-3d" id="expertiseAI"></div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M20 5L25 15L35 20L25 25L20 35L15 25L5 20L15 15L20 5Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
                         </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Community Management</h4>
-                            <p>24/7 engagement, moderation, and relationship building with your audience</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Paid Advertising</h4>
-                            <p>ROI-focused ad campaigns on Facebook, Instagram, LinkedIn, and TikTok</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Analytics & Reporting</h4>
-                            <p>Comprehensive insights on reach, engagement, and conversion metrics</p>
-                        </div>
+                        <h3 class="card-title">Artificial Intelligence</h3>
+                        <p class="card-description">Enterprise-grade AI solutions: machine learning, NLP, computer vision, and predictive analytics that transform data into competitive advantage.</p>
+                        <ul class="card-features">
+                            <li>Custom ML Models & Training</li>
+                            <li>Natural Language Processing</li>
+                            <li>Computer Vision & OCR</li>
+                            <li>Predictive Analytics</li>
+                            <li>AI Process Automation</li>
+                        </ul>
+                        <a href="#contact" class="card-link">
+                            <span>Explore AI Solutions</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M2 8H14M14 8L8 2M14 8L8 14" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <a href="#contact" class="btn btn-primary">Grow Your Presence</a>
+
+                <!-- Web Dev Card -->
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-number">02</div>
+                    <div class="card-3d" id="expertiseWeb"></div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect x="5" y="8" width="30" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 14H35" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Web Development</h3>
+                        <p class="card-description">High-performance web applications built with modern frameworks. Scalable, secure, and designed to convert visitors into customers.</p>
+                        <ul class="card-features">
+                            <li>React, Next.js, Vue Ecosystems</li>
+                            <li>Headless CMS & JAMstack</li>
+                            <li>E-Commerce Platforms</li>
+                            <li>Progressive Web Apps</li>
+                            <li>API Development & Integration</li>
+                        </ul>
+                        <a href="#contact" class="card-link">
+                            <span>Explore Web Dev</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M2 8H14M14 8L8 2M14 8L8 14" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social Media Card -->
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-number">03</div>
+                    <div class="card-3d" id="expertiseSocial"></div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="2"/>
+                                <path d="M8 20C8 20 12 12 20 12C28 12 32 20 32 20" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Social Media Management</h3>
+                        <p class="card-description">Strategic social media management that amplifies brand voice, engages communities, and drives measurable business growth.</p>
+                        <ul class="card-features">
+                            <li>Content Strategy & Creation</li>
+                            <li>Community Management 24/7</li>
+                            <li>Paid Social Campaigns</li>
+                            <li>Influencer Partnerships</li>
+                            <li>Analytics & Reporting</li>
+                        </ul>
+                        <a href="#contact" class="card-link">
+                            <span>Explore Social Media</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M2 8H14M14 8L8 2M14 8L8 14" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- POS Card -->
+                <div class="expertise-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-number">04</div>
+                    <div class="card-3d" id="expertisePOS"></div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <rect x="8" y="10" width="24" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 18H26M14 22H22" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">POS Systems</h3>
+                        <p class="card-description">Intelligent point-of-sale systems that streamline operations, manage inventory, and provide real-time business intelligence.</p>
+                        <ul class="card-features">
+                            <li>Cloud-Based Infrastructure</li>
+                            <li>Inventory Management</li>
+                            <li>Multi-Payment Integration</li>
+                            <li>Real-Time Analytics</li>
+                            <li>Multi-Location Support</li>
+                        </ul>
+                        <a href="#contact" class="card-link">
+                            <span>Explore POS Systems</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M2 8H14M14 8L8 2M14 8L8 14" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- POS Section -->
-    <section class="service-detail pos-section" id="pos">
-        <div class="detail-3d" id="pos3d"></div>
-        <div class="container">
-            <div class="detail-content">
-                <span class="detail-label">04 — POS Systems</span>
-                <h2 class="detail-title">Intelligent Point of Sale</h2>
-                <p class="detail-description">Modern POS solutions that streamline transactions, manage inventory, and provide real-time business insights for retail and hospitality businesses.</p>
-                <div class="detail-features">
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Cloud-Based POS</h4>
-                            <p>Access your business data anywhere with secure cloud infrastructure</p>
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container-large">
+            <div class="section-header-modern" data-aos="fade-up">
+                <div class="section-label-modern">
+                    <span class="label-number">02</span>
+                    <span class="label-text">Featured Work</span>
+                </div>
+                <h2 class="section-title-modern">
+                    Projects That Define <br>
+                    <span class="title-gradient">Digital Excellence</span>
+                </h2>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="fade-up">
+                    <div class="portfolio-image">
+                        <div class="portfolio-bg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">View Case Study →</a>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Inventory Management</h4>
-                            <p>Real-time stock tracking, automated reordering, and multi-location support</p>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                        <h3 class="portfolio-title">FinanceAI Platform</h3>
+                        <p class="portfolio-description">AI-powered financial analytics platform processing $2B+ transactions</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <div class="portfolio-bg" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">View Case Study →</a>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Payment Integration</h4>
-                            <p>Accept all payment methods including contactless, mobile, and crypto</p>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">E-Commerce</span>
+                            <span class="tag">Web Dev</span>
+                        </div>
+                        <h3 class="portfolio-title">LuxeRetail</h3>
+                        <p class="portfolio-description">Premium e-commerce platform with 300% conversion increase</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <div class="portfolio-bg" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">View Case Study →</a>
                         </div>
                     </div>
-                    <div class="feature-item">
-                        <div class="feature-icon">◆</div>
-                        <div class="feature-content">
-                            <h4>Business Analytics</h4>
-                            <p>Detailed sales reports, customer insights, and profit margin analysis</p>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">SaaS</span>
+                            <span class="tag">POS</span>
+                        </div>
+                        <h3 class="portfolio-title">CloudPOS</h3>
+                        <p class="portfolio-description">Cloud POS solution serving 1000+ retail locations globally</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <div class="portfolio-bg" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">View Case Study →</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <div class="portfolio-tags">
+                            <span class="tag">Social</span>
+                            <span class="tag">Marketing</span>
+                        </div>
+                        <h3 class="portfolio-title">GlobalBrand Campaign</h3>
+                        <p class="portfolio-description">Social media strategy reaching 50M+ users across 20 countries</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-cta" data-aos="fade-up">
+                <a href="#contact" class="btn btn-outline-modern">
+                    <span>View All Projects</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="process">
+        <div class="container-large">
+            <div class="section-header-modern" data-aos="fade-up">
+                <div class="section-label-modern">
+                    <span class="label-number">03</span>
+                    <span class="label-text">Our Process</span>
+                </div>
+                <h2 class="section-title-modern">
+                    How We Transform <br>
+                    <span class="title-gradient">Ideas Into Reality</span>
+                </h2>
+            </div>
+
+            <div class="process-timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-number">01</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Discovery & Strategy</h3>
+                        <p class="timeline-description">Deep dive into your business goals, target audience, and market landscape to craft a winning digital strategy.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-number">02</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Design & Architecture</h3>
+                        <p class="timeline-description">Create stunning, user-centric designs and robust technical architecture that scales with your growth.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="timeline-number">03</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Development & Testing</h3>
+                        <p class="timeline-description">Agile development with continuous testing to ensure flawless functionality and performance.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-number">04</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Launch & Growth</h3>
+                        <p class="timeline-description">Seamless deployment with ongoing optimization and support to maximize ROI and market impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container-large">
+            <div class="section-header-modern" data-aos="fade-up">
+                <div class="section-label-modern">
+                    <span class="label-number">04</span>
+                    <span class="label-text">Client Success</span>
+                </div>
+                <h2 class="section-title-modern">
+                    Trusted By Leaders <br>
+                    <span class="title-gradient">Around The World</span>
+                </h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"MERCI Studio transformed our digital presence completely. Their AI solutions increased our efficiency by 300% and the web platform they built handles millions of users flawlessly."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <div class="author-name">John Davidson</div>
+                            <div class="author-role">CEO, TechCorp International</div>
                         </div>
                     </div>
                 </div>
-                <a href="#contact" class="btn btn-primary">Get POS Demo</a>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Working with MERCI was a game-changer. Their social media strategy grew our community from 10K to 500K followers in 6 months. Incredible results and professionalism."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah Martinez</div>
+                            <div class="author-role">Marketing Director, LuxeBrands</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"The POS system MERCI developed revolutionized our retail operations. Real-time inventory, seamless payments, and analytics that actually help us make better decisions."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <div class="author-name">Michael Klein</div>
+                            <div class="author-role">Founder, RetailChain Group</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container-large">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">Ready to Build Something Extraordinary?</h2>
+                <p class="cta-description">Let's discuss how we can transform your digital ambitions into market-leading reality.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-large">
+                        <span>Start Your Project</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:hello@mercistudio.com" class="btn btn-outline-large">
+                        <span>Email Us</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="contact-3d" id="contact3d"></div>
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Get In Touch</span>
-                <h2 class="section-title">Let's Build Something Extraordinary</h2>
-                <p class="section-subtitle">Ready to transform your digital presence? We're here to help.</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h4>Email</h4>
-                        <a href="mailto:hello@mercistudio.com">hello@mercistudio.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Phone</h4>
-                        <a href="tel:+1234567890">+1 (234) 567-890</a>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Location</h4>
-                        <p>Global Remote Studio</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Social</h4>
-                        <div class="social-links">
-                            <a href="#" class="social-link">LinkedIn</a>
-                            <a href="#" class="social-link">Twitter</a>
-                            <a href="#" class="social-link">GitHub</a>
-                            <a href="#" class="social-link">Dribbble</a>
+    <section class="contact-modern-section" id="contact">
+        <div class="contact-bg-3d" id="contactBg3D"></div>
+        <div class="container-large">
+            <div class="contact-grid-modern">
+                <div class="contact-info-modern" data-aos="fade-right">
+                    <h2 class="contact-title-modern">Let's Connect</h2>
+                    <p class="contact-subtitle-modern">Based in Zürich, working globally. Reach out and let's create something exceptional together.</p>
+
+                    <div class="contact-details-modern">
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="detail-content">
+                                <div class="detail-label">Email</div>
+                                <a href="mailto:hello@mercistudio.com" class="detail-value">hello@mercistudio.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="detail-content">
+                                <div class="detail-label">Phone</div>
+                                <a href="tel:+41443334455" class="detail-value">+41 44 333 44 55</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M17.657 16.657L13.414 20.9C13.039 21.275 12.5306 21.4854 12 21.4854C11.4694 21.4854 10.961 21.275 10.586 20.9L6.343 16.657C5.22422 15.5381 4.46234 14.1127 4.15369 12.5608C3.84504 11.009 4.00349 9.40047 4.60901 7.93853C5.21452 6.4766 6.24181 5.22737 7.55548 4.34796C8.86915 3.46856 10.4155 3 12 3C13.5845 3 15.1309 3.46856 16.4445 4.34796C17.7582 5.22737 18.7855 6.4766 19.391 7.93853C19.9965 9.40047 20.155 11.009 19.8463 12.5608C19.5377 14.1127 18.7758 15.5381 17.657 16.657Z" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="12" cy="11" r="3" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="detail-content">
+                                <div class="detail-label">Location</div>
+                                <div class="detail-value">Zürich, Switzerland</div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="social-links-modern">
+                        <a href="#" class="social-link-modern">LinkedIn</a>
+                        <a href="#" class="social-link-modern">Twitter</a>
+                        <a href="#" class="social-link-modern">GitHub</a>
+                        <a href="#" class="social-link-modern">Dribbble</a>
+                    </div>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" class="form-input" placeholder="Your Name" required>
+
+                <form class="contact-form-modern" id="contactForm" data-aos="fade-left">
+                    <div class="form-row">
+                        <div class="form-group-modern">
+                            <label class="form-label-modern">Your Name</label>
+                            <input type="text" class="form-input-modern" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group-modern">
+                            <label class="form-label-modern">Email Address</label>
+                            <input type="email" class="form-input-modern" placeholder="john@company.com" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" class="form-input" placeholder="Your Email" required>
+
+                    <div class="form-row">
+                        <div class="form-group-modern">
+                            <label class="form-label-modern">Company</label>
+                            <input type="text" class="form-input-modern" placeholder="Your Company">
+                        </div>
+                        <div class="form-group-modern">
+                            <label class="form-label-modern">Budget Range</label>
+                            <select class="form-input-modern">
+                                <option>Select budget</option>
+                                <option>$10k - $25k</option>
+                                <option>$25k - $50k</option>
+                                <option>$50k - $100k</option>
+                                <option>$100k+</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-input" placeholder="Project Budget">
+
+                    <div class="form-group-modern">
+                        <label class="form-label-modern">Service Interest</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="service" value="ai">
+                                <span class="checkbox-custom"></span>
+                                <span>AI Solutions</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="service" value="web">
+                                <span class="checkbox-custom"></span>
+                                <span>Web Development</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="service" value="social">
+                                <span class="checkbox-custom"></span>
+                                <span>Social Media</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="service" value="pos">
+                                <span class="checkbox-custom"></span>
+                                <span>POS Systems</span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <textarea class="form-input form-textarea" placeholder="Tell us about your project" rows="5" required></textarea>
+
+                    <div class="form-group-modern">
+                        <label class="form-label-modern">Project Details</label>
+                        <textarea class="form-input-modern form-textarea-modern" placeholder="Tell us about your project, goals, and timeline..." rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+
+                    <button type="submit" class="btn btn-submit-modern">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-text">MERCI</span>
-                    <span class="logo-dot">•</span>
+    <footer class="footer-modern">
+        <div class="container-large">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-mark">◆</span>
+                        <span class="logo-text">MERCI</span>
+                    </div>
+                    <p class="footer-tagline">Swiss precision. Global impact.</p>
+                    <p class="footer-description">Premium digital solutions for international brands. Based in Zürich, serving the world.</p>
                 </div>
-                <p class="footer-text">Premium Digital Solutions Studio</p>
-                <p class="footer-copyright">© 2024 Merci Studio. All rights reserved.</p>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-list">
+                        <li><a href="#expertise">Artificial Intelligence</a></li>
+                        <li><a href="#expertise">Web Development</a></li>
+                        <li><a href="#expertise">Social Media</a></li>
+                        <li><a href="#expertise">POS Systems</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-list">
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-title">Stay Updated</h4>
+                    <p class="newsletter-description">Get insights on digital innovation and industry trends.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="your@email.com" required>
+                        <button type="submit" class="newsletter-button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>© 2024 MERCI Studio. All rights reserved.</p>
+                    <p class="footer-location">Zürich, Switzerland 🇨🇭</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="js/3d-effects.js"></script>
+    <script src="js/modern.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
